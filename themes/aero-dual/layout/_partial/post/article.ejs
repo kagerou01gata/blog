@@ -27,6 +27,13 @@
         <div class="post-content">
           <%- post.content %>
         </div>
+        <% if (config.disqus_shortname){ %>
+          <div class="post-comment">
+            <div id="disqus_thread">
+              <noscript>コメント機能を使うにはJavaScriptを有効にしてください。</noscript>
+            </div>
+          </div>
+        <% } %>
       </div>
     </div>
   </div>
