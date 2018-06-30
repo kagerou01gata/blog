@@ -3,7 +3,7 @@
 <!-- Archive List -->
 <div class="container">
   <div class="row">
-    <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+      <div class="col-lg-10 col-md-10 col-md-offset-1">
         <div class="post-info text-muted">
             <h1 class="page-title">
               <% if (page.tag){ %>
@@ -12,7 +12,7 @@
               記事一覧</h1>
         </div>
       <% page.posts.each(function(post){ %>
-        <%- partial('_partial/archive-entry', {post: post, index: true}) %>
+        <%- partial('_partial/index-entry', {post: post, index: true}) %>
       <% }) %>
 
     </div>
