@@ -6,13 +6,6 @@
     <!-- Post Date and Categories -->
     <div class="date-and-category">
       <div class="date"><%= date(post.date) %></div>
-      <div class="categories">
-        <% if (post.categories && post.categories.length) { %>
-          <%- partial('post/categories', {categories: post.categories}) %>
-        <% } else { %>
-          <%- __('uncategorized') %>
-        <% } %>
-      </div>
     </div>
     <!-- Post Excerpt -->
     <div class="excerpt typo"><%- post.excerpt || __('no_excerpt') %></div>
