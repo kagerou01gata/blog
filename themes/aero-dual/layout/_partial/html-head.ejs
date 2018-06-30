@@ -18,7 +18,24 @@
   <% } %>
 
   <!-- Site Title -->
-  <title><%- config.title %></title>
+  <%
+  var title = page.title;
+
+  if (is_archive()){
+    if (is_month()){
+      title = page.year + '/' + page.month;
+    } else if (is_year()){
+      title += ': ' + page.year;
+    }
+  } else if (is_category()){
+    <!-- title = __('category') + ': ' + page.category; -->
+    title = page.category;
+  } else if (is_tag()){
+    <!-- title = __('tag') + ': ' + page.tag; -->
+    title = page.tag;
+  }
+  %>
+  <title><% if (title){ %><%= title %> | <% } %><%= config.title %></title>
 
   <!-- Bootstrap CSS -->
   <%- css('css/bootstrap.min.css') %>
