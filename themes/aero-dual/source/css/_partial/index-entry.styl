@@ -45,14 +45,18 @@
   .tags
     overflow hidden
     .untagged, .tag
+      color-revert()
       display inline-block
       font-size remify(13px)
       padding 0 remify(5px)
       text-align center
       border 1px solid $theme-color
       border-radius remify(3px)
+      &:hover
+        color: $theme-color
+        background-color: $theme-background
     .untagged
-      color $theme-color
+      // color $theme-color
 
 /* mobile style */
 @media only screen and (max-width: 768px)
