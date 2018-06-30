@@ -39,5 +39,5 @@ show_count: false
 favicon: /favicon.png
 
 # Google Analytics Tracking ID
-google_analytics:
+google_analytics: UA-121633809-1
 
