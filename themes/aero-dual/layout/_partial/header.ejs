@@ -39,17 +39,24 @@
         </div>
         <div class="<%= siteMenuClass %>">
           <ul>
-            <% for (var i in theme.menu){ %>
-              <li>
-                <a href="<%- theme.menu[i].url ? url_for(theme.menu[i].url) : url_for(theme.menu[i]) %>">
-                  <% if (theme.menu[i].icon) { %>
-                  <i class="fa fa-<%= theme.menu[i].icon %> fa-stack-2x"></i>
-                  <% } else { %>
-                  <%= i %>
-                  <% } %>
-                </a>
-              </li>
-            <% } %>
+              <% for (var i in theme.menu){ %>
+                <li>
+                  <a href="<%- theme.menu[i].url ? url_for(theme.menu[i].url) : url_for(theme.menu[i]) %>">
+                    <% if (theme.menu[i].icon) { %>
+                    <i class="fa fa-<%= theme.menu[i].icon %> fa-stack-2x"></i>
+                    <% } else { %>
+                    <%= i %>
+                    <% } %>
+                  </a>
+                </li>
+              <% } %>
+              <% for (var i in theme.menu_link){ %>
+                <li>
+                  <a href="<%- url_for(theme.menu_link[i]) %>" target="_blank">
+                    <%= i %>
+                  </a>
+                </li>
+              <% } %>
           </ul>
         </div>
       </div>

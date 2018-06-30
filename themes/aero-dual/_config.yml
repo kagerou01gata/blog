@@ -3,6 +3,7 @@ menu:
   Home: /
   Archives: /archives
   # change github and email values to your own addresses
+menu_link:
   Twitter: https://twitter.com/kagerou01gata/
   Steam: https://steamcommunity.com/id/kagerou01gata/
 rss: /atom.xml
