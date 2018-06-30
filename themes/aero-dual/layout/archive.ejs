@@ -1,9 +1,16 @@
 <!-- Archive Header -->
-<%- partial('_partial/header', {headerType: 'archive'}) %>
+<%- partial('_partial/header', {headerType: 'index'}) %>
 <!-- Archive List -->
 <div class="container">
   <div class="row">
     <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <div class="post-info text-muted">
+            <h1 class="page-title">
+              <% if (page.tag){ %>
+                <span class="tag">#<%- page.tag %></span>
+              <% } %>
+              記事一覧</h1>
+        </div>
       <% page.posts.each(function(post){ %>
         <%- partial('_partial/archive-entry', {post: post, index: true}) %>
       <% }) %>
