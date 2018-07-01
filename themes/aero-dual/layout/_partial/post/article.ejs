@@ -9,9 +9,11 @@
         <div class="post-info text-muted">
           <h1 class="title"><%- post.title %></h1>
           <!-- Date -->
+          <% if (post.path != "404/index.html"){ %>
           <span class="date-time info">
             <span class="date"><%- date(post.date, config.date_format) %></span>
           </span>
+          <% } %>
           <% if (post.categories && post.categories.length){ %>
           <!--  Categories  -->
             <span class="categories info">Under <%- partial('categories', {categories: post.categories}) %></span>
@@ -27,9 +29,11 @@
         <div class="post-content">
           <%- post.content %>
         </div>
-        <div class="post-share">
-            <a href="https://twitter.com/intent/tweet?text=<%- urlEncode(page.title) %>%20%7C%20<%-  urlEncode(config.title) %>&url=<%- post.permalink %>" class="share-button share-twitter" target="_blank"><i class="fab fa-twitter"></i>Tweet</a>
-        </div>
+        <% if (post.path != "404/index.html"){ %>
+          <div class="post-share">
+              <a href="https://twitter.com/intent/tweet?text=<%- urlEncode(page.title) %>%20%7C%20<%-  urlEncode(config.title) %>&url=<%- post.permalink %>" class="share-button share-twitter" target="_blank"><i class="fab fa-twitter"></i>Tweet</a>
+          </div>
+        <% } %>
         <% if (config.disqus_shortname){ %>
           <div class="post-comment">
             <div id="disqus_thread">
