@@ -36,7 +36,7 @@ archive_type: 'monthly'
 show_count: false
 
 # favicon
-favicon: /favicon.png
+favicon: /img/icon.png
 
 # Google Analytics Tracking ID
 google_analytics: UA-121633809-1
