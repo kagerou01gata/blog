@@ -81,3 +81,7 @@ deploy:
   type:
 
 disqus_shortname: kagblo
+
+# Include/Exclude Files/Folders
+include:
+  - _redirects
