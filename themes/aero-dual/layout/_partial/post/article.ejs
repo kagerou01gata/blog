@@ -28,7 +28,7 @@
           <%- post.content %>
         </div>
         <div class="post-share">
-            <a href="https://twitter.com/intent/tweet?text=<%- urlEncode(page.title) %>%20%7C%20<%-  urlEncode(config.title) %>&url=<%- post.permalink %>" class="share-twitter" target="_blank"><i class="fab fa-twitter"></i>Tweet</a>
+            <a href="https://twitter.com/intent/tweet?text=<%- urlEncode(page.title) %>%20%7C%20<%-  urlEncode(config.title) %>&url=<%- post.permalink %>" class="share-button share-twitter" target="_blank"><i class="fab fa-twitter"></i>Tweet</a>
         </div>
         <% if (config.disqus_shortname){ %>
           <div class="post-comment">
